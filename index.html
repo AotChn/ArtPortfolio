@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+  <div id="loading-screen">
+    <div class="loader">
+        <!-- <div id="spinner"></div> -->
+        <!-- Add your loading animation here (could be text, icon, or custom SVG) -->
+        <div class="flex-container">
+          <svg width="800" height="200" xmlns="http://www.w3.org/2000/svg" id="svg1">
+              <!-- Initial circle (invisible at first) -->
+              <circle id="circle1" cx="50" cy="100" r="20" fill="#ffbf00" stroke="#fff" stroke-width="0" />
+              <circle id="circle2" cx="150" cy="100" r="20" fill="#ffbf00" stroke="#fff" stroke-width="0" />
+              <circle id="circle3" cx="250" cy="100" r="20" fill="#ffbf00" stroke="#fff" stroke-width="0" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" id="svg2">
+              <text x="50" y="100" font-family="Arial" font-size="80" fill="#FFF">AOT</text>
+          </svg>
+        </div>
+        <script>
+            const circles = ['circle1', 'circle2', 'circle3'];
+            let currentIndex = 0;
+        
+            function showNextCircle() {
+            if (currentIndex < circles.length) {
+                const circle = document.getElementById(circles[currentIndex]);
+                circle.style.opacity = 1; // Make the circle visible
+                currentIndex++;
+                setTimeout(showNextCircle, 1000); // Wait 1 second before showing the next circle
+            }
+            }
+            circles.forEach(id => document.getElementById(id).style.opacity = 0);
+            showNextCircle();
+        </script>
+    </div>
+  </div>
+  <script src="/js/loading.js"></script>
+
+
+<body>
+  <div class="top-bar">
+    <div id="logo">AOTCHN</div>
+    <div id="menu">
+      <ul>
+        <li><a href="index.html"> PROJECTS</a></li>
+        <li><a href="index.html"> ABOUT</a></li>
+      </ul>
+    </div>
+    <div id="switch"> NM</div>
+  </div>
+
+
+  <div class="t1">
+    <canvas id="bg">
+      <!-- <p>text</p> -->
+    </canvas>
+    <div class="t1-content">
+      <div class="top">
+        <!-- <p>AOT CHANTHORN</p> -->
+         <p class="name">A</p>
+         <p class="name">O</p>
+         <p class="name">T</p>
+         <p class="name"> </p>
+         <p class="name">C</p>
+         <p class="name">H</p>
+         <p class="name">A</p>
+         <p class="name">N</p>
+         <p class="name">T</p>
+         <p class="name">H</p>
+         <p class="name">O</p>
+         <p class="name">R</p>
+         <p class="name">N</p>
+      </div>
+      <div class="bottom">
+        <div id="left">
+          <p>Hello &#128507;</p>
+          <p>I like to watch movies </p>
+          <p>Currently Based in California</p>
+        </div>
+        <div id="right">
+          <p>P</p>
+          <p>O</p>
+          <p>R</p>
+          <p>T</p>
+          <p>F</p>
+          <p>O</p>
+          <p>L</p>
+          <p>I</p>
+          <p>O</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner1">
+    <div class="banner1-content">
+      <span>I LOVE PINEAPPLES &#12781;</span>
+      <span>I LOVE PINEAPPLES &#12781;</span>
+      <span>I LOVE PINEAPPLES &#12781;</span>
+    </div>
+  </div>
+  <script src="/js/banner.js"></script>
+
+  <div class="t2">
+    <div class="image-grid">
+      <div class="column-1">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+      </div>
+      <div class="column-2">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+      </div>
+      <div class="column-3">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+      </div>
+      <div class="column-4">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+      </div>
+      <div class="column-5">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+        <img src="pine.png" alt="null">
+      </div>
+    </div>
+    <script src="/js/grid-wall.js"></script>
+  </div>
+
+  <div class="banner2">
+    <div class="banner3-content">
+      <span>I LOVE PINEAPPLES &#12781;</span>
+      <span>I LOVE PINEAPPLES &#12781;</span>
+      <span>I LOVE PINEAPPLES &#12781;</span>
+    </div>
+  </div>
+
+  <div class="t3">
+    <button class="image-button">
+      <div id="image"><img src="Golf_Balls.png" alt="null"></div>
+      <div id="text"><p>BANGO-BOKO</p></div>
+    </button>
+    <button class="image-button">
+      <div id="image"><img src="UMMAN.png" alt="null"></div>
+      <div id="text"><p>SUEN</p> </div>
+    </button>
+    <button class="image-button">
+      <div id="image"><img src="flower.png" alt="null"></div>
+      <div id="text"> <p>FINLEY</p></div>
+    </button>
+    <button class="image-button">
+      <div id="image"></div>
+      <div id="text"> </div>
+    </button>
+
+  </div>
+
+  <div class="banner3">
+    <div class="banner3-content">
+      <span>I LOVE PINEAPPLES &#12781;</span>
+      <span>I LOVE PINEAPPLES &#12781;</span>
+      <span>I LOVE PINEAPPLES &#12781;</span>
+    </div>
+  </div>
+
+  <div class="t4">
+    <div class="linkList">
+      <button class="three-section">
+        <div id="year"><p>2024</p></div>
+        <div id="name"><p>SUNFISH</p></div>
+        <div id="arrow"><p>&#9654;</p></div>
+      </button>
+      <button class="three-section">
+        <div id="year"><p>2022</p></div>
+        <div id="name"><p>SALMON</p></div>
+        <div id="arrow"><p>&#9654;</p></div>
+      </button>
+      <button class="three-section">
+        <div id="year"><p>2020</p></div>
+        <div id="name"><p>TROUT</p></div>
+        <div id="arrow"><p>&#9654;</p></div>
+      </button>
+
+    </div>
+  </div>
+
+
+
+  <div class="t5">
+    <p>GET IN TOUCH</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

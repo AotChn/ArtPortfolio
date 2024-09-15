@@ -1,0 +1,502 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* gap: 1px; */
+  /* overflow: hidden; */
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: auto;
+  top: 0;
+  left: 0;
+  background-color: #eec39a;
+}
+
+p {
+  color: blue;
+  z-index: 99;
+}
+
+/* .t1 {
+  width: 800px;  
+  height: 600px; 
+} */
+/*--------------------------------------------
+  ANIMATION SCREEN
+--------------------------------------------*/
+canvas #bg{
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.t1 {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+
+
+/*--------------------------------------------
+  LOADING SCREEN
+--------------------------------------------*/
+
+
+/* Loading screen covers entire viewport */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white; /* Or any background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Keep it above everything */
+  transition: opacity 0.6s ease, visibility 2s ease;
+}
+
+/* Loader animation */
+.loader p {
+  font-size: 1.5rem;
+  color: red; /* Text color for loading text */
+  animation: fadeInOut 2.5s infinite; /* Simple fade in/out animation */
+}
+
+svg {
+  background-color: white;
+  width: 500px; /* Set width and height as needed */
+  height: 500px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Loading text animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* When the loading screen is hidden */
+#loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#main-content {
+  display: block; /* Show content once loading is done */
+}
+
+/*--------------------------------------------
+  BANNER SCROLL
+--------------------------------------------*/
+
+.banner1, .banner2, .banner3 {
+  position: relative;
+  /* border: 5px solid green; */
+  width: 100vw;
+  height: 80px;
+
+
+  overflow: hidden;
+  border: #1d1c1c solid 2px;
+  background-color: #f1d922; /* Background color of the banner */
+  white-space: nowrap; /* Prevent line breaks */
+  display: flex;
+  align-items: center;
+}
+
+.banner1, .banner2, .banner3 span {
+  color: #1d1c1c; /* Text color */
+  font-family: Impact, sans-serif;
+  font-size: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.banner1-content, .banner2-content, .banner3-content {
+  display: inline-block;
+  /* padding: 10px; */
+  position: absolute;
+  animation: scroll-text 20s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%); /* Start position (off-screen to the right) */
+  }
+  100% {
+    transform: translateX(-100%); /* End position (off-screen to the left) */
+  }
+}
+
+/*--------------------------------------------
+  TOP-bar
+--------------------------------------------*/
+
+.top-bar {
+  background-color: white;
+  display: flex;
+  border: #1d1c1c solid 2px;
+  align-items: stretch;
+  height: 80px;
+}
+
+.top-bar #logo, #menu, #switch {
+  padding-top: 30px;
+}
+
+.top-bar #logo{
+  font-family: Impact, sans-serif;
+  width: 7.5%;
+  border-right: #1d1c1c solid 2px;
+  font-size: 20px;
+  color: rgb(31, 29, 29);
+  text-align: center;
+}
+
+.top-bar #menu {
+  font-family: Arial, sans-serif;
+  width: 85%;
+  border-right: #1d1c1c solid 2px;
+  font-size: 15px;
+  justify-content: space-between;
+  text-align: center;
+  padding-right: 20px;
+}
+
+.top-bar #switch {
+  width: 7.5%;
+  justify-self: center;
+  text-align: center;
+}
+
+.top-bar #menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+}
+
+.top-bar #menu a {
+  text-decoration: none;
+  text-decoration: underline;
+  color: rgb(31, 29, 29);
+}
+
+.top-bar #menu a:hover {
+  text-decoration: none;
+  color: rgb(233, 134, 230);
+}
+
+
+/* <div class="t1-content">
+<div class="top">
+  <p>AOT CHANTHORN</p>
+</div>
+<div class="bottom">
+  <div id="left">
+    <p>Hello </p>
+    <p>I like to make websites </p>
+    <p>Based in California</p>
+  </div>
+  <div id="right">
+    <p>PORTFOLIO</p>
+  </div>
+</div>
+</div> */
+
+/*--------------------------------------------
+  T1
+--------------------------------------------*/
+
+.t1-content {
+  padding-left: 20px;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
+
+.t1-content .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.t1-content .bottom p {
+  color: #1d1c1c ;
+}
+
+.t1-content .bottom #right {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+
+.t1-content .bottom #right p {
+  color: #1d1c1c ;
+  font-size: 100px;
+  font-weight:2000;
+  font-stretch: ultra-condensed;
+  font-family: Impact, sans-serif;
+  transform: scaleY(3.5);
+}
+
+.t1-content .bottom #left {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.t1-content .bottom #left p{
+  margin-bottom: 1px;
+  font-family: Arial, sans-serif;
+  padding-left: 100px;
+  font-size: 20px;
+}
+
+.t1-content .top {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+}
+
+.t1-content .top p{
+  /* border: 1px solid blue; */
+  color: #1d1c1c ;
+  font-family: Impact, sans-serif;
+  font-size: 100px;
+  font-weight:2000;
+  font-stretch: ultra-condensed;
+  transform: scaleY(3.5);
+}
+
+/*--------------------------------------------
+  T3 - PHOTO WALL
+--------------------------------------------*/
+
+.t3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height:100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  /* background-color: white; */
+}
+
+.t3 #image {
+  /* border:red 0.5px solid; */
+  width: 100%;
+  height: 75%;
+}
+
+.t3 #image img {
+    box-sizing: border-box;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+}
+
+.t3 #text {
+  /* border:blue 0.5px solid; */
+  width: 100%;
+  height: 25%;
+  text-align: right;
+  font-size: 40px;
+}
+
+.t3 #text p{
+  font-family: Impact, sans-serif;
+  color: #1d1c1c;
+  padding-right: 40px;
+}
+
+.image-button {
+  background-color: white;
+  border:#1d1c1c 0.5px solid;
+  height: 525px;
+  width: 100%;
+}
+
+.image-button:hover {
+  border: #1d1c1c solid 2px;
+}
+
+/*-------------*/
+
+/*--------------------------------------------
+  T4 - TIMELINE
+--------------------------------------------*/
+
+
+.t4 .linkList{
+  display: flex;
+  flex-direction: column;
+  border: #1d1c1c 2px solid;
+  background-color: white;
+}
+
+.t4 .linkList .three-section{
+
+  display: flex;
+  height: 60px;
+  background: none;
+  border: 0.5px solid #918d8d;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: inherit;
+  text-decoration: none;
+}
+
+.t4 .linkList .three-section p{
+  color: #1d1c1c;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.t4 .linkList .three-section #year {
+  /* border: #1d1c1c 1px solid; */
+  padding-left: 30px;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+}
+
+.t4 .linkList .three-section #name {
+  /* border: #1d1c1c 1px solid; */
+  width: 25%;
+  height: 100%;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+}
+
+.t4 .linkList .three-section #arrow {
+  /* border: #1d1c1c 1px solid; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 10px;
+  align-items: center;
+  justify-items:  right;
+  padding-left: 500px;
+}
+
+
+.t4 .linkList .three-section:focus {
+  outline: none;
+}
+
+
+
+/*--------------------------------------------
+  t2  - BALLS
+--------------------------------------------*/
+
+/* .t2 img {
+  mix-blend-mode: multiply; 
+  background-color: #ff0000; 
+} */
+
+.t2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+
+.t2 .image-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4 columns */
+  grid-template-rows: repeat(5, auto);   /* 5 rows */
+  gap: 10px; /* Space between images */
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.t2 .image-grid img {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+
+}
+.column-1 {
+  grid-column: 1;
+}
+
+.column-2 {
+  grid-column: 2;
+}
+
+.column-3 {
+  grid-column: 3;
+}
+
+.column-4 {
+  grid-column: 4;
+}
+
+.column-5 {
+  grid-column: 5;
+}
+
+/*--------------------------------------------
+  t5  - GET IN TOUCH
+--------------------------------------------*/
+
+.t5 {
+  width: 100%;
+  height: 550px;
+  background-color: white;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 100px;
+}
