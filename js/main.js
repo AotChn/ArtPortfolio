@@ -2,6 +2,9 @@ import '../style.css'
 
 import * as THREE from 'three';
 
+// Function to dynamically load Three.js
+
+
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 
 const scene = new THREE.Scene();
@@ -181,3 +184,4 @@ function animate(){
 }
 
 animate()
+loadThreeJS(init);
