@@ -1,0 +1,92 @@
+.container {
+    display: inline-block;
+    font-size: 40px;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  #animateText {
+      display: flex;
+      height: 60px;
+      background: none;
+      border: 0.5px solid #918d8d;
+      padding: 0;
+      margin: 0;
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+      text-align: inherit;
+      text-decoration: none;
+  }
+
+  .text {
+    display: inline-block;
+    transition: transform 0.5s ease; 
+    font-family: courier, monospace;
+    color: blue;
+  }
+
+  .shrink {
+    transform: scaleY(0); 
+    /* transform: scaleX(0); */
+  }
+  .appear {
+      transform: scaleY(1);
+  }
+
+  .span1, .span2 {
+    position: absolute;
+    transition: transform 3s ease;
+  }
+
+  .moveright {
+    animation: moveRight 1s forwards;
+  }
+
+  .moveleft {
+    animation: moveLeft 1s forwards;
+  }
+
+  .rmoveright {
+    animation: RmoveRight 1s forwards;
+  }
+
+  .rmoveleft {
+    animation: RmoveLeft 1s forwards;
+  }
+
+  @keyframes moveRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100px);
+    }
+  }
+
+  @keyframes moveLeft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-40px);
+    }
+  }
+
+  @keyframes RmoveRight {
+    from {
+      transform: translateX(100px);
+    }
+    to {
+      transform: translateX(0); 
+    }
+  }
+
+  @keyframes RmoveLeft {
+    from {
+      transform: translateX(-40px);
+    }
+    to {
+      transform: translateX(0); 
+    }
+  }

@@ -164,20 +164,50 @@ svg {
   height: 80px;
 }
 
-.top-bar #logo, #menu, #switch {
+
+#logo-button{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: none;
+  outline: none;
+  border:none;
+  /* border: 0.5px solid #918d8d; */
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: inherit;
+  text-decoration: none;
+}
+
+
+.top-bar .logo, .menu, .switch {
   padding-top: 30px;
 }
 
-.top-bar #logo{
+.top-bar .logo{
   font-family: Impact, sans-serif;
   width: 7.5%;
+  height: 100%;
   border-right: #1d1c1c solid 2px;
-  font-size: 20px;
+  font-size: 26px;
   color: rgb(31, 29, 29);
-  text-align: center;
+
 }
 
-.top-bar #menu {
+/* .top-bar #logo a:hover::after {
+  content: "hi";
+}
+
+.top-bar #logo a:after {
+  content: "back";
+} */
+
+
+.top-bar .menu {
   font-family: Arial, sans-serif;
   width: 85%;
   border-right: #1d1c1c solid 2px;
@@ -187,13 +217,13 @@ svg {
   padding-right: 20px;
 }
 
-.top-bar #switch {
+.top-bar .switch {
   width: 7.5%;
   justify-self: center;
   text-align: center;
 }
 
-.top-bar #menu ul {
+.top-bar .menu ul {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -203,13 +233,13 @@ svg {
   gap: 10px;
 }
 
-.top-bar #menu a {
+.top-bar .menu a {
   text-decoration: none;
   text-decoration: underline;
   color: rgb(31, 29, 29);
 }
 
-.top-bar #menu a:hover {
+.top-bar .menu a:hover {
   text-decoration: none;
   color: rgb(233, 134, 230);
 }
@@ -450,12 +480,11 @@ svg {
 
 .t2 .image-grid{
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 4 columns */
-  grid-template-rows: repeat(5, auto);   /* 5 rows */
-  gap: 10px; /* Space between images */
-  width: 100vw; /* Full width */
-  height: 100vh; /* Full height */
-  /* position: fixed; */
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: repeat(5, auto);
+  gap: 10px; 
+  width: 100vw;
+  height: 100vh; 
   top: 0;
   left: 0;
   overflow: hidden;

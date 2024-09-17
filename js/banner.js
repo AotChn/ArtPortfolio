@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
     const bannerText = document.querySelector('.banner1-content');
     const bannerWidth = document.querySelector('.banner1').offsetWidth;
-    const textWidth = bannerText.scrollWidth;
+    textWidth = bannerText.scrollWidth;
   
     // Duplicate the text spans until they cover twice the width of the banner
     while (textWidth < bannerWidth * 2) {
